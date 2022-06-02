@@ -1,0 +1,149 @@
+article {
+    position: relative;
+    padding:20px;
+    background-color: white;
+}
+
+.authorCreatedModified {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    margin: 0;
+}
+
+.postDetailImage {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+}
+
+.postContent {
+    width: 70%;
+    text-align: center;
+}
+
+
+.commentsSection {
+    padding:20px;
+    grid-area: comments;
+}
+
+.formWrap {
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+}
+
+.allComments {
+    margin-top: 20px;
+}
+
+.comment {
+    position:relative;
+    padding:10px;
+    margin-bottom:10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.commentCreatedModified {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin:0;
+    padding:0;
+}
+
+.authorAndComment {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.authorImageName {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 2px solid black;
+}
+
+.authorImageName:hover img{
+    background-color: #ccc;
+}
+
+.authorImageName:hover a{
+    text-decoration: underline;
+}
+
+.commentUserLogo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.commentAuthor {
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    color:black;
+}
+
+.commentContent {
+    flex-wrap: wrap;
+}
+
+/* MOBILE */
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "navbar"
+        "article"
+        "comments"
+        "aside"
+        "footer";
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    body {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "navbar navbar"
+            "article aside"
+            "comments comments"
+            "footer footer";
+    }
+
+    aside {
+        margin: 20px;
+    }
+
+    article {
+        margin: 20px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+    body {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "navbar navbar navbar"
+            "article article aside"
+            "comments comments comments"
+            "footer footer footer";
+    }
+
+    aside {
+        margin: 20px;
+    }
+
+    article {
+        margin: 20px;
+    }
+}

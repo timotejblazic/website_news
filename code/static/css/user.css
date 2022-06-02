@@ -1,0 +1,75 @@
+/* -------------------- NAV USER -------------------- */
+.userNav {
+    margin: 20px;
+    align-self: flex-start;
+}
+.userNav ul {
+    background-color: white;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+.userNav ul li a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #6e6d6d;
+}
+
+.userNav ul li a.active{
+    background-color: #14cade;
+    color: white;
+}
+
+.userNav ul li a:hover:not(.active) {
+    color: #424242;
+}
+/* -------------------- NAV USER -------------------- */
+
+.allComments {
+    width: 100%;
+}
+
+
+/* MOBILE */
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "navbar"
+        "userNav"
+        "article"
+        "footer";
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "navbar navbar"
+            "userNav article"
+            "footer footer";
+    }
+
+    article {
+        margin: 20px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+    body {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "navbar navbar navbar"
+            "userNav article article"
+            "footer footer footer";
+    }
+
+    article {
+        margin: 20px;
+    }
+}

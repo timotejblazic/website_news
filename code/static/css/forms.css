@@ -1,0 +1,100 @@
+.formWrap {
+    width: 100%;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.loginWrap {
+    width: 50%;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px 18px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.customUpload {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 18px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #cacbcc;
+    cursor: pointer;
+}
+
+.customUpload:hover {
+    background-color: #b3b3b3;
+}
+
+input[type="submit"]{
+    width: 30%;
+    max-width: 300px;
+    min-width: 100px;
+    padding: 10px 18px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size:18px;
+    display: inline-block;
+    background-color: #14cade;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #14b7c9;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px 18px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    resize:vertical;
+}
+
+.containerBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerBtns > div {
+    width: 30%;
+    max-width: 300px;
+}
+
+.containerBtns > div > input[type="submit"] {
+    width: 100%;
+}
+
+.containerBtns > div > input[value="Delete"] {
+    background-color:#f51b1b;
+}
+
+.containerBtns > div > input[value="Delete"]:hover {
+    background-color:#c91616;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+}
